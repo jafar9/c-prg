@@ -11,7 +11,6 @@ sample output:
 
 30->40
 5->10
-
 */
 
 #include<stdio.h>
