@@ -11,7 +11,7 @@ int isprime(int n)
 	{
 	   if(n%i==0)
 	   {
-	   		return 0;
+	   	return 0;
 	   }
 	   
 	}
@@ -26,7 +26,7 @@ void main()
 	{
 		int flag1=isprime(i);
 		int flag2=isprime(n-i);
-		//printf("%d %d\n",flag1,flag2);
+		
 		if(flag1 && flag2)
 		{
 			printf("%d %d\n",i,n-i);
