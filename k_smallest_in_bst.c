@@ -8,12 +8,9 @@ struct node
 	struct node* right;
 };
 
-int slice=0;
+int slice=0; //this is used for stoping the recursive calls 
+
 struct node* root=NULL;
-
-//struct bst* root=NULL;
-
-
 
 void  insert(struct node* temp, struct node* head)
 {
@@ -45,6 +42,8 @@ void  insert(struct node* temp, struct node* head)
 	}
 
 }
+
+
 void kth_smallest(struct node* root,int k)
 {
 	static int count=0;
@@ -71,19 +70,7 @@ void kth_smallest(struct node* root,int k)
 
 	}
 }
-void inorder(struct node* root)
-{
-	if(root==NULL)
-	{
-		return;
-	}
-	else
-	{
-		inorder(root->left);
-		printf("%d",root->data);
-		inorder(root->right);
-	}
-}
+
 
 void main()
 {
@@ -100,17 +87,12 @@ void main()
 		 	temp->left=NULL;
 		 	temp->right=NULL;
 		 	insert(temp,root);
-		 	//printf("ewrerertert \n");
 		}
-		if(opt==2)
+		else if(opt==2)
 		{
 			int k;
 			scanf("%d",&k);
 			kth_smallest(root,k);
-		}
-		if(opt==3)
-		{
-			inorder(root);
 		}
 	}
 }
