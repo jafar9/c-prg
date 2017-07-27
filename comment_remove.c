@@ -1,3 +1,10 @@
+/*
+question: Remove comments from a given C/C++ program
+see the input file name abc.txt which contains input format see in previous page
+compile: gcc comment_remove.c
+run: ./a.out abc.txt 123.txt
+
+*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
