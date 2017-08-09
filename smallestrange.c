@@ -1,3 +1,12 @@
+/*
+arr1[] : [4, 7, 9, 12, 15]
+arr2[] : [0, 8, 10, 14, 20]
+arr3[] : [6, 12, 16, 30, 50]
+Output:
+The smallest range is [6 8] 
+
+*/
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
@@ -26,18 +35,14 @@ void main()
 		scanf("%d",c+i);
 	}
 	int prev_range=INT_MAX;
-	int curr_range;
-	int mini;
-	int maxi;
-	int start;
-	int end;
+	int curr_range,mini,maxi,start,end;
 	int i=0,j=0,k=0;
 	while(j < n && i < m && k < l)
 	{
 		mini=min(a[i],min(b[j],c[k]));
 		maxi=max(a[i],max(b[j],c[k]));
 		curr_range=maxi-mini;
-		printf("min is %d  max is %d range is %d\n", mini,maxi,curr_range);
+		//printf("min is %d  max is %d range is %d\n", mini,maxi,curr_range);
 		if(curr_range < prev_range)
 		{
 			prev_range=curr_range;
