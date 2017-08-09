@@ -1,3 +1,10 @@
+/*
+ arary size=9;
+input:2 3 1 1 -1 6 4 3 8
+ sum=7
+possible seq is: [2 3 1 1], [1 1 -1 6], [4 3]
+smallest sub array is :[4,8]
+*/
 
 #include<stdio.h>
 #include<stdlib.h>
@@ -19,8 +26,7 @@ void main()
 		{
 			cursum=cursum-a[j++];
 			start=j;
-			printf("current sum is %d and start is %d \n",cursum,start);
-			
+			//printf("current sum is %d and start is %d \n",cursum,start);
 		}
 		if(cursum==x)
 		{
@@ -31,14 +37,13 @@ void main()
 				ansstart=start;
 				ansend=i-1;
 				min=range;
-				printf("ansstart is %d  ansend is %d\n",ansstart,ansend);
+				//printf("ansstart is %d  ansend is %d\n",ansstart,ansend);
 			}
 		}
 		if(i < n)
 		{
 			cursum=cursum+a[i];
-			printf("current sum is %d and i is %d \n",cursum,i);
-
+		//	printf("current sum is %d and i is %d \n",cursum,i);
 		}
 			
 
