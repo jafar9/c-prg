@@ -3,7 +3,7 @@
 input:2 3 1 1 -1 6 4 3 8
  sum=7
 possible seq is: [2 3 1 1], [1 1 -1 6], [4 3]
-smallest sub array is :[4,8]
+smallest sub array is :[4,3]
 */
 
 #include<stdio.h>
